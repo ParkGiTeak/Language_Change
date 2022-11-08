@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.languagechange.Listener.OnLanguageChangeListener
 import com.example.languagechange.R
 import com.example.languagechange.model.LanguageModel
+import kotlinx.android.synthetic.main.language_item.view.*
 
 class LanguageChangeAdaper(val languageList: List<LanguageModel>) :
     RecyclerView.Adapter<LanguageChangeAdaper.LanguageChangeViewHolder>() {
@@ -26,7 +27,7 @@ class LanguageChangeAdaper(val languageList: List<LanguageModel>) :
             }
         }
         fun bind(model: LanguageModel) {
-            view.findViewById<TextView>(R.id.tv_language_bottom).text = model.language
+            view.tv_language_bottom.text = model.language
         }
     }
 
