@@ -10,7 +10,7 @@ import com.example.languagechange.R
 import com.example.languagechange.model.LanguageModel
 import kotlinx.android.synthetic.main.language_item.view.*
 
-class LanguageChangeAdaper(val languageList: List<LanguageModel>) :
+class LanguageChangeAdaper(private val languageList: List<LanguageModel>) :
     RecyclerView.Adapter<LanguageChangeAdaper.LanguageChangeViewHolder>() {
 
     private lateinit var litemClickListener: OnLanguageChangeListener
@@ -20,7 +20,7 @@ class LanguageChangeAdaper(val languageList: List<LanguageModel>) :
         init {
             /* RecyclerViewItem 클릭리스너 */
             view.setOnClickListener {
-                val position = bindingAdapterPosition
+                val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION && litemClickListener != null) {
                     litemClickListener.onChangeClick(view, position)
                 }

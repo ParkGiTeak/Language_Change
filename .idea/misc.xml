@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/coner_radius_bottomsheet.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_language_change.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.29429931640625" />
+        <entry key="app/src/main/res/layout/fragment_language_change.xml" value="0.14175724637681159" />
         <entry key="app/src/main/res/layout/fragment_languegae_change.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/fragment_languege_change.xml" value="0.13697916666666668" />
         <entry key="app/src/main/res/layout/language_item.xml" value="0.2" />
       </map>
     </option>
