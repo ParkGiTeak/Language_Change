@@ -21,7 +21,7 @@ class LanguageChangeAdaper(private val languageList: List<LanguageModel>) :
             /* RecyclerViewItem 클릭리스너 */
             view.setOnClickListener {
                 val position = adapterPosition
-                if (position != RecyclerView.NO_POSITION && litemClickListener != null) {
+                if (position != RecyclerView.NO_POSITION) {
                     litemClickListener.onChangeClick(view, position)
                 }
             }

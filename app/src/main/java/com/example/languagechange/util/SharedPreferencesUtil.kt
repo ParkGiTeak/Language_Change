@@ -1,8 +1,9 @@
 package com.example.languagechange.util
 
+import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
-import androidx.preference.PreferenceManager
+import android.util.Log
 
 class SharedPreferencesUtil {
     companion object{
@@ -10,13 +11,13 @@ class SharedPreferencesUtil {
         var preference: SharedPreferences? = null
         fun initialize(context: Context) {
             this.context = { context }
-            this.preference = PreferenceManager.getDefaultSharedPreferences(context)
+            this.preference = context.getSharedPreferences("SaveLanguage", Activity.MODE_PRIVATE)
         }
         fun getLanguage(key: String):String {
             return  if (preference != null) {
-                preference!!.getString(key, "").toString()
+                preference!!.getString(key, LanguageChangeUtil.languageDefault).toString()
             } else {
-                ""
+                LanguageChangeUtil.languageDefault
             }
         }
         fun addLanguage(key: String, value: String) {
