@@ -7,7 +7,9 @@ import java.util.*
 
 class LanguageChangeUtil {
     companion object {
-        const val languageDefault: String = "DEFAULT"
+        const val langDefault: String = "DEFAULT"
+        const val langKo: String = "ko"
+        const val langEn: String = "en"
         val sysLanguage: String = Locale.getDefault().language
         var savedLanguage: String? = null
 

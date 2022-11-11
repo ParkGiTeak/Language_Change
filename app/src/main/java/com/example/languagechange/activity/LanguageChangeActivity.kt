@@ -29,6 +29,7 @@ class LanguageChangeActivity : AppCompatActivity() {
 
         setActivityRecyclerView()
         addLanguage()
+        languageIsChecked()
 
         language_change_button.setOnClickListener {
             val languageChangeFragment = LanguageChangeFragment()
@@ -84,6 +85,34 @@ class LanguageChangeActivity : AppCompatActivity() {
         languages.add(LanguageModel("한국어", "ko", false))
         languages.add(LanguageModel("English", "en", false))
         lanAdapter.notifyDataSetChanged()
+    }
+
+    private fun languageIsChecked() {
+        when(LanguageChangeUtil.savedLanguage) {
+            LanguageChangeUtil.langDefault -> {
+                when (LanguageChangeUtil.sysLanguage) {
+                    LanguageChangeUtil.langKo -> {
+                        languages[0].isLanguageChecked = true
+                        languages[1].isLanguageChecked = false
+                    }
+                    LanguageChangeUtil.langEn -> {
+                        languages[0].isLanguageChecked = false
+                        languages[1].isLanguageChecked = true
+                    }
+                    else -> {
+                        Log.e("LanguageLog", "languageIsChecked() Error!")
+                    }
+                }
+            }
+            LanguageChangeUtil.langKo -> {
+                languages[0].isLanguageChecked = true
+                languages[1].isLanguageChecked = false
+            }
+            LanguageChangeUtil.langEn -> {
+                languages[0].isLanguageChecked = false
+                languages[1].isLanguageChecked = true
+            }
+        }
     }
 
     private fun clearItem() {

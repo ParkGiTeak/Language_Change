@@ -33,7 +33,7 @@ class LanguageChangeFragment: BottomSheetDialogFragment() {
         setRecyclerView()
     }
 
-    //Todo 바텀시트 getThem()
+    override fun getTheme(): Int = R.style.LanguageBottomSheetDialogThem
 
     private fun setRecyclerView() {
         Log.d("LanguageLog", "setRecyclerView")

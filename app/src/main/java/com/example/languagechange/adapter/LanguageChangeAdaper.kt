@@ -1,5 +1,6 @@
 package com.example.languagechange.adapter
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,6 +39,12 @@ class LanguageChangeAdaper(private val languageList: List<LanguageModel>) :
 
     override fun onBindViewHolder(holder: LanguageChangeViewHolder, position: Int) {
         val language = languageList[position]
+
+        if (language.isLanguageChecked) {
+            holder.view.tv_language_bottom.setTextColor(Color.parseColor("#009dff"))
+        } else {
+            holder.view.tv_language_bottom.setTextColor(Color.parseColor("#8d8d8d"))
+        }
 
         holder.apply {
             bind(language)

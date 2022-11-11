@@ -15,9 +15,9 @@ class SharedPreferencesUtil {
         }
         fun getLanguage(key: String):String {
             return  if (preference != null) {
-                preference!!.getString(key, LanguageChangeUtil.languageDefault).toString()
+                preference!!.getString(key, LanguageChangeUtil.langDefault).toString()
             } else {
-                LanguageChangeUtil.languageDefault
+                LanguageChangeUtil.langDefault
             }
         }
         fun addLanguage(key: String, value: String) {

@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/coner_radius_bottomsheet.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/line_divider.xml" value="0.152" />
         <entry key="app/src/main/res/layout/activity_language_change.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_language_change.xml" value="0.14175724637681159" />
