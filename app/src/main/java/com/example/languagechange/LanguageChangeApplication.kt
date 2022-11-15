@@ -8,6 +8,6 @@ class LanguageChangeApplication:Application() {
     override fun onCreate() {
         super.onCreate()
         SharedPreferencesUtil.initialize(this)
-        LanguageChangeUtil.updateBaseContextLocale(this)
+        LanguageChangeUtil.setLocale()
     }
 }

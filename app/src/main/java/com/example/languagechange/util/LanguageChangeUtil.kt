@@ -13,9 +13,12 @@ class LanguageChangeUtil {
         val sysLanguage: String = Locale.getDefault().language
         var savedLanguage: String? = null
 
-        fun updateBaseContextLocale(context: Context): Context {
+        fun setLocale() {
             savedLanguage = SharedPreferencesUtil.getLanguage("Save_Lang")
             Log.d("LanguageLog", "저장된 언어: ${savedLanguage}")
+        }
+
+        fun updateBaseContextLocale(context: Context): Context {
             val locale = Locale(savedLanguage)
             Locale.setDefault(locale)
             return updateResourcesLocale(context, locale)

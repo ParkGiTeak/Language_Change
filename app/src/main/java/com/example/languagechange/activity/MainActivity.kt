@@ -29,6 +29,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(LanguageChangeUtil.updateBaseContextLocale(newBase))
+        LanguageChangeUtil.setLocale()
+        if (LanguageChangeUtil.savedLanguage == LanguageChangeUtil.langDefault) {
+            super.attachBaseContext(newBase)
+        }
+        else {
+            super.attachBaseContext(LanguageChangeUtil.updateBaseContextLocale(newBase))
+        }
     }
 }
